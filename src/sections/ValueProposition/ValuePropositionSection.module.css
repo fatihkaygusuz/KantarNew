@@ -1,0 +1,174 @@
+.section {
+  overflow: hidden;
+  background: var(--kds-color-surface-canvas);
+}
+
+.container {
+  overflow: visible;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: var(--kds-size-8);
+  padding-block: var(--kds-size-12);
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--kds-size-5);
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--kds-color-text-brand);
+  font-family: var(--kds-font-family-product), sans-serif;
+  font-size: var(--kds-font-size-label-lg);
+  font-weight: var(--kds-font-weight-product-heading-strong);
+  line-height: var(--kds-font-line-height-label-lg);
+}
+
+.title {
+  max-width: var(--kds-max-w-xl);
+  margin: 0;
+  color: var(--kds-color-text-primary);
+  font-family: var(--kds-font-family-brand), sans-serif;
+  font-size: var(--kds-font-size-display-md);
+  font-weight: var(--kds-font-weight-brand-display);
+  line-height: var(--kds-font-line-height-display-md);
+  letter-spacing: var(--kds-font-tracking-brand-display);
+}
+
+.description {
+  max-width: var(--kds-max-w-md);
+  margin: 0;
+  color: var(--kds-color-text-secondary);
+  font-family: var(--kds-font-family-product), sans-serif;
+  font-size: var(--kds-font-size-body-md);
+  font-weight: var(--kds-font-weight-product-body);
+  line-height: var(--kds-font-line-height-body-md);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--kds-size-3) var(--kds-size-6);
+  margin-top: var(--kds-size-2);
+}
+
+.primaryAction,
+.secondaryAction {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--kds-size-12);
+  padding: var(--kds-size-3) var(--kds-size-6);
+  border-radius: var(--kds-radius-soft-md);
+  font-family: var(--kds-font-family-product), sans-serif;
+  font-size: var(--kds-font-size-body-md);
+  font-weight: var(--kds-font-weight-product-heading-moderate);
+  line-height: var(--kds-font-line-height-body-md);
+  text-decoration: none;
+}
+
+.primaryAction {
+  gap: var(--kds-size-2);
+  color: var(--kds-color-action-primary-foreground-default);
+  background: var(--kds-color-action-primary-background-default);
+}
+
+.primaryAction:hover {
+  background: var(--kds-color-action-primary-background-hover);
+}
+
+.primaryAction svg {
+  width: var(--kds-size-5);
+  height: var(--kds-size-5);
+}
+
+.secondaryAction {
+  color: var(--kds-color-action-secondary-foreground-default);
+  border: var(--kds-size-px) solid var(--kds-color-action-secondary-border-default);
+  background: var(--kds-color-action-secondary-background-default);
+}
+
+.secondaryAction:hover {
+  background: var(--kds-color-action-secondary-background-hover);
+}
+
+.trustLine {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--kds-size-3);
+  max-width: var(--kds-max-w-xl);
+  margin: 0;
+  padding-top: var(--kds-size-2);
+  color: var(--kds-color-text-secondary);
+  font-family: var(--kds-font-family-product), sans-serif;
+  font-size: var(--kds-font-size-body-md);
+  font-weight: var(--kds-font-weight-product-body);
+  line-height: var(--kds-font-line-height-body-md);
+}
+
+.trustMark {
+  flex: 0 0 var(--kds-size-4);
+  height: var(--kds-size-4);
+  margin-top: var(--kds-size-1);
+  background: var(--kds-color-accent-blue);
+}
+
+.artwork {
+  position: relative;
+  order: -1;
+  width: min(100%, var(--kds-max-w-3xl));
+  margin-inline: auto;
+  aspect-ratio: 637 / 780;
+  overflow: hidden;
+  border-radius: var(--kds-radius-soft-2xl);
+}
+
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    grid-template-columns: minmax(var(--kds-max-w-sm), 1fr) minmax(var(--kds-max-w-md), 1fr);
+    gap: var(--kds-layout-grid-gutter);
+    padding-block: var(--kds-size-20);
+  }
+
+  .artwork {
+    order: 0;
+    justify-self: start;
+    width: 100%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .layout {
+    grid-template-columns: minmax(var(--kds-max-w-xl), 1fr) minmax(var(--kds-max-w-xl), 1.1fr);
+    min-height: var(--kds-size-192);
+    padding-block: var(--kds-size-16);
+  }
+
+  .content {
+    order: -1;
+  }
+
+  .title {
+    font-size: var(--kds-font-size-display-lg);
+    line-height: var(--kds-font-line-height-display-lg);
+  }
+
+  .description {
+    font-size: var(--kds-font-size-body-lg);
+    line-height: var(--kds-font-line-height-body-lg);
+  }
+}

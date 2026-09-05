@@ -1,0 +1,24 @@
+.section {
+  display: grid;
+  align-items: end;
+  min-height: var(--kds-size-96);
+  overflow: hidden;
+  background: var(--kds-lavender-500);
+}
+
+.image {
+  width: 100%;
+  min-height: var(--kds-size-56);
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (min-width: 768px) {
+  .section {
+    min-height: var(--kds-size-192);
+  }
+
+  .image {
+    min-height: var(--kds-size-96);
+  }
+}
