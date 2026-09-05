@@ -1,0 +1,21 @@
+.eyebrow {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--kds-size-4);
+  font-family: var(--kds-font-family-product), Inter, sans-serif;
+  font-size: var(--kds-font-size-heading-xl);
+  line-height: var(--kds-font-line-height-heading-xl);
+  font-weight: var(--kds-font-weight-product-heading-strong);
+}
+
+.rule {
+  display: block;
+  width: var(--kds-size-14);
+  height: var(--kds-size-0-5);
+  background: currentColor;
+}
+
+.lavender { color: var(--kds-lavender-700); }
+.blue { color: var(--kds-blue-400); }
+.orange { color: var(--kds-orange-500); }

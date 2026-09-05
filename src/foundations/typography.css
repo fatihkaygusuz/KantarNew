@@ -1,0 +1,117 @@
+.type-brand-display-2xl,
+.type-brand-display-xl,
+.type-brand-display-lg,
+.type-brand-display-md,
+.type-brand-display-sm,
+.type-brand-display-xs {
+  font-family: var(--kds-font-family-brand), sans-serif;
+  font-weight: var(--kds-font-weight-brand-display);
+  color: var(--kds-color-text-primary);
+}
+
+.type-brand-display-2xl {
+  font-size: var(--kds-font-size-display-2xl);
+  line-height: var(--kds-font-line-height-display-2xl);
+  letter-spacing: var(--kds-font-tracking-brand-display);
+}
+
+.type-brand-display-xl {
+  font-size: var(--kds-font-size-display-xl);
+  line-height: var(--kds-font-line-height-display-xl);
+  letter-spacing: var(--kds-font-tracking-brand-display);
+}
+
+.type-brand-display-lg {
+  font-size: var(--kds-font-size-display-lg);
+  line-height: var(--kds-font-line-height-display-lg);
+  letter-spacing: var(--kds-font-tracking-brand-display);
+}
+
+.type-brand-display-md {
+  font-size: var(--kds-font-size-display-md);
+  line-height: var(--kds-font-line-height-display-md);
+  letter-spacing: var(--kds-font-tracking-brand-display);
+}
+
+.type-brand-display-sm {
+  font-size: var(--kds-font-size-display-sm);
+  line-height: var(--kds-font-line-height-display-sm);
+}
+
+.type-brand-display-xs {
+  font-size: var(--kds-font-size-display-xs);
+  line-height: var(--kds-font-line-height-display-xs);
+}
+
+.type-product-heading-xl,
+.type-product-heading-lg,
+.type-product-heading-md,
+.type-product-heading-sm,
+.type-product-heading-xs,
+.type-product-body-lg,
+.type-product-body-md,
+.type-product-body-sm,
+.type-product-body-xs,
+.type-product-label-lg,
+.type-product-label-md {
+  font-family: var(--kds-font-family-product), Inter, Arial, sans-serif;
+  letter-spacing: var(--kds-font-tracking-product-default);
+}
+
+.type-product-heading-xl {
+  font-weight: var(--kds-font-weight-product-heading-strong);
+  font-size: var(--kds-font-size-heading-xl);
+  line-height: var(--kds-font-line-height-heading-xl);
+}
+.type-product-heading-lg {
+  font-weight: var(--kds-font-weight-product-heading-strong);
+  font-size: var(--kds-font-size-heading-lg);
+  line-height: var(--kds-font-line-height-heading-lg);
+}
+.type-product-heading-md {
+  font-weight: var(--kds-font-weight-product-heading-strong);
+  font-size: var(--kds-font-size-heading-md);
+  line-height: var(--kds-font-line-height-heading-md);
+}
+.type-product-heading-sm {
+  font-weight: var(--kds-font-weight-product-heading-moderate);
+  font-size: var(--kds-font-size-heading-sm);
+  line-height: var(--kds-font-line-height-heading-sm);
+}
+.type-product-heading-xs {
+  font-weight: var(--kds-font-weight-product-heading-moderate);
+  font-size: var(--kds-font-size-heading-xs);
+  line-height: var(--kds-font-line-height-heading-xs);
+}
+
+.type-product-body-lg {
+  font-weight: var(--kds-font-weight-product-body);
+  font-size: var(--kds-font-size-body-lg);
+  line-height: var(--kds-font-line-height-body-lg);
+}
+.type-product-body-md {
+  font-weight: var(--kds-font-weight-product-body);
+  font-size: var(--kds-font-size-body-md);
+  line-height: var(--kds-font-line-height-body-md);
+}
+.type-product-body-sm {
+  font-weight: var(--kds-font-weight-product-body);
+  font-size: var(--kds-font-size-body-sm);
+  line-height: var(--kds-font-line-height-body-sm);
+}
+.type-product-body-xs {
+  font-weight: var(--kds-font-weight-product-body);
+  font-size: var(--kds-font-size-body-xs);
+  line-height: var(--kds-font-line-height-body-xs);
+}
+
+.type-product-label-lg {
+  font-weight: var(--kds-font-weight-product-label);
+  font-size: var(--kds-font-size-label-lg);
+  line-height: var(--kds-font-line-height-label-lg);
+}
+.type-product-label-md {
+  font-weight: var(--kds-font-weight-product-label);
+  font-size: var(--kds-font-size-label-md);
+  line-height: var(--kds-font-line-height-label-md);
+}

@@ -1,0 +1,289 @@
+.section {
+  width: 100%;
+  background: var(--kds-color-surface-canvas);
+  color: var(--kds-color-text-primary);
+}
+
+.heroContainer {
+  overflow: visible;
+}
+
+.hero {
+  min-height: var(--kds-size-180);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  align-items: center;
+  gap: var(--kds-layout-grid-gutter);
+  padding-block: var(--kds-size-24);
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--kds-size-8);
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  max-width: var(--kds-max-w-lg);
+  font-family: var(--kds-font-family-brand), sans-serif;
+  font-size: var(--kds-font-size-display-lg);
+  line-height: var(--kds-font-line-height-display-lg);
+  font-weight: var(--kds-font-weight-brand-display);
+  letter-spacing: var(--kds-font-tracking-brand-display);
+}
+
+.titleAccent {
+  color: var(--kds-lavender-700);
+}
+
+.description {
+  margin: 0;
+  max-width: var(--kds-max-w-lg);
+  color: var(--kds-color-text-secondary);
+  font-family: var(--kds-font-family-product), Inter, sans-serif;
+  font-size: var(--kds-font-size-body-lg);
+  line-height: var(--kds-font-line-height-body-lg);
+  font-weight: var(--kds-font-weight-product-body);
+}
+
+/*
+ * Artwork geometry is local composition data rather than a reusable KDS value.
+ * System values inside the composition (colour, max width) remain token-bound.
+ */
+.artwork {
+  position: relative;
+  width: min(100%, var(--kds-max-w-3xl));
+  aspect-ratio: 794 / 726;
+  justify-self: center;
+  isolation: isolate;
+}
+
+.portrait {
+  position: absolute;
+  z-index: 3;
+  left: 11.8%;
+  top: 0;
+  width: 71.3%;
+  height: 74.7%;
+  max-width: none;
+  object-fit: cover;
+}
+
+.blueTop,
+.orangeBar,
+.blueBottom,
+.gradientBar,
+.dots {
+  position: absolute;
+}
+
+.blueTop {
+  z-index: 4;
+  left: -5%;
+  top: -12.8%;
+  width: 17%;
+  height: 12.5%;
+  background: var(--kds-color-accent-blue);
+}
+
+.orangeBar {
+  z-index: 2;
+  left: -2.6%;
+  top: 25%;
+  width: 14.6%;
+  height: 49.3%;
+  background: var(--kds-orange-400);
+}
+
+.blueBottom {
+  z-index: 4;
+  left: 34%;
+  top: 74.4%;
+  width: 29.2%;
+  height: 11.3%;
+  background: var(--kds-color-accent-blue);
+}
+
+.gradientBar {
+  z-index: 1;
+  left: 83%;
+  top: 41%;
+  width: 22.3%;
+  height: 48%;
+  background: linear-gradient(
+    180deg,
+    var(--kds-brand-gradient-hero-start) 0%,
+    var(--kds-brand-gradient-hero-end) 52%,
+    var(--kds-brand-gradient-supporting-1-end) 100%
+  );
+}
+
+.dots {
+  z-index: 5;
+  right: -2%;
+  top: 18%;
+  width: 20.5%;
+  aspect-ratio: 1;
+  background-image: radial-gradient(
+    circle,
+    var(--kds-lavender-500) 0 var(--kds-size-0-5),
+    var(--kds-transparent) var(--kds-size-1)
+  );
+  background-size: 19% 19%;
+  background-position: center;
+}
+
+.servicesSurface {
+  background: var(--kds-color-surface-subtle);
+}
+
+.services {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.service {
+  --service-accent: var(--kds-lavender-800);
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: var(--kds-size-8);
+  min-width: 0;
+  padding-block: var(--kds-size-11);
+  border-bottom: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle);
+}
+
+.service:last-child {
+  border-bottom: 0;
+}
+
+.decision { --service-accent: var(--kds-color-accent-orange); }
+.strategic { --service-accent: var(--kds-color-accent-blue); }
+
+.iconBlock {
+  width: var(--kds-size-14);
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  background: var(--service-accent);
+  color: var(--kds-color-icon-inverse);
+}
+
+.iconBlock svg {
+  width: 56%;
+  height: 56%;
+}
+
+.serviceContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--kds-size-5);
+  min-width: 0;
+}
+
+.serviceTitle {
+  margin: 0;
+  max-width: var(--kds-max-w-xs);
+  color: var(--kds-color-text-primary);
+  font-family: var(--kds-font-family-product), Inter, sans-serif;
+  font-size: var(--kds-font-size-heading-xl);
+  line-height: var(--kds-font-line-height-heading-xl);
+  font-weight: var(--kds-font-weight-product-heading-strong);
+}
+
+.serviceRule {
+  width: var(--kds-size-10);
+  height: var(--kds-size-0-5);
+  background: var(--service-accent);
+}
+
+.serviceDescription {
+  margin: 0;
+  max-width: var(--kds-max-w-xs);
+  color: var(--kds-color-text-secondary);
+  font-family: var(--kds-font-family-product), Inter, sans-serif;
+  font-size: var(--kds-font-size-body-md);
+  line-height: var(--kds-font-line-height-body-lg);
+  font-weight: var(--kds-font-weight-product-heading-moderate);
+}
+
+.serviceArrow {
+  color: var(--service-accent);
+  font-family: var(--kds-font-family-product), Inter, sans-serif;
+  font-size: var(--kds-font-size-display-sm);
+  line-height: var(--kds-font-line-height-display-sm);
+  font-weight: var(--kds-font-weight-product-body);
+}
+
+/* KDS Layout / MD */
+@media (min-width: 768px) {
+  .hero {
+    grid-template-columns: minmax(var(--kds-max-w-xs), 1fr) minmax(var(--kds-max-w-md), 1.25fr);
+  }
+
+  .artwork {
+    justify-self: end;
+  }
+
+  .services {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .service {
+    padding-inline: var(--kds-size-8);
+    padding-block: var(--kds-size-11);
+    border-right: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle);
+    border-bottom: 0;
+  }
+
+  .service:first-child { padding-left: 0; }
+  .service:last-child {
+    padding-right: 0;
+    border-right: 0;
+  }
+}
+
+/* KDS Layout / XL */
+@media (min-width: 1280px) {
+  .hero {
+    grid-template-columns: minmax(var(--kds-max-w-sm), 0.8fr) minmax(var(--kds-max-w-xl), 1.2fr);
+  }
+
+  .title {
+    font-size: var(--kds-font-size-display-xl);
+    line-height: var(--kds-font-line-height-display-xl);
+  }
+
+  .iconBlock {
+    width: var(--kds-size-20);
+  }
+}
+
+/* KDS Layout / 2XL */
+@media (min-width: 1536px) {
+  .iconBlock {
+    width: var(--kds-size-24);
+  }
+}
+
+/* Mobile layout uses the same KDS values; only composition structure changes. */
+@media (max-width: 767px) {
+  .hero {
+    min-height: auto;
+    padding-top: var(--kds-size-16);
+  }
+
+  .artwork {
+    margin-top: var(--kds-size-8);
+  }
+
+  .blueTop {
+    top: -6%;
+  }
+}

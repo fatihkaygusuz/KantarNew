@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--kds-layout-page-margin);
+}
+
+.content {
+  max-width: calc(var(--kds-layout-measure-wide) + (2 * var(--kds-layout-page-margin)));
+}
+
+.reading {
+  max-width: calc(var(--kds-layout-measure-narrow) + (2 * var(--kds-layout-page-margin)));
+}
+
+.wide {
+  max-width: calc(var(--kds-container-2xl) + (2 * var(--kds-layout-page-margin)));
+}
