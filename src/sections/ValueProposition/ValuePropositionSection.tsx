@@ -13,12 +13,12 @@ function ArrowIcon() {
 export default function ValuePropositionSection() {
   return (
     <section className={styles.section} aria-labelledby="value-proposition-heading">
-      <Container variant="wide" className={styles.container}>
-        <div className={styles.layout}>
-          <div className={styles.artwork} aria-hidden="true">
-            <img className={styles.wave} src={waveArtwork} alt="" />
-          </div>
+      <div className={styles.artwork} aria-hidden="true">
+        <img className={styles.wave} src={waveArtwork} alt="" />
+      </div>
 
+      <Container variant="wide" className={styles.contentContainer}>
+        <div className={styles.content}>
           <div className={styles.content}>
             <p className={styles.eyebrow}>INTELLIGENCE FOR BRAND GROWTH</p>
             <h1 id="value-proposition-heading" className={styles.title}>
@@ -40,7 +40,7 @@ export default function ValuePropositionSection() {
               <span className={styles.trustMark} aria-hidden="true" />
               Trusted by the world&apos;s leading brands to understand people, markets and growth.
             </p>
-          </div>
+        </div>
         </div>
       </Container>
     </section>

@@ -25,5 +25,3 @@ The legacy layer still contains generated Figma code by design. It is quarantine
 ## Intentional local values
 
 The Intelligence artwork keeps only composition-specific percentage geometry and its source aspect ratio locally. These values describe one piece of artwork and are not promoted to reusable KDS tokens.
-
-The Value Proposition wave artwork retains its reference-required `32px` corner radius locally. The generated radius scale currently ends at `--kds-radius-soft-4xl` (`24px`), so this is an explicit KDS token gap pending a source-token decision.
