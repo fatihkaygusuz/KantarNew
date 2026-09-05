@@ -40,6 +40,16 @@
   line-height: var(--kds-font-line-height-label-lg);
 }
 
+.title {
+  max-width: var(--kds-max-w-xs);
+  margin: 0;
+  color: var(--kds-color-text-primary);
+  font-family: var(--kds-font-family-product), sans-serif;
+  font-size: var(--kds-font-size-heading-xl);
+  font-weight: var(--kds-font-weight-product-heading-moderate);
+  line-height: var(--kds-font-line-height-heading-xl);
+}
+
 .description {
   max-width: var(--kds-max-w-xs);
   margin: 0;
@@ -54,6 +64,11 @@
 }
 
 .brand .eyebrow {
+  color: var(--kds-color-text-inverse);
+}
+
+.brand .title,
+.inverse .title {
   color: var(--kds-color-text-inverse);
 }
 
@@ -91,7 +106,7 @@
 
 .metrics {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: var(--kds-size-2);
   width: 100%;
   margin: 0;

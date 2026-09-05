@@ -95,6 +95,8 @@ Do not wrap or patch old generated markup.
 
 After migration, the active implementation of that section must contain no generated responsive scaling classes or raw reusable design values.
 
+Clean architecture must preserve the reference design. Refactoring is not redesigning. Never simplify, merge, invent or remove visible hierarchy merely to make the implementation cleaner.
+
 ## Validation
 
 Before considering work complete:
