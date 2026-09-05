@@ -40,17 +40,6 @@
   line-height: var(--kds-font-line-height-label-lg);
 }
 
-.title {
-  max-width: var(--kds-max-w-xs);
-  margin: 0;
-  white-space: pre-line;
-  color: var(--kds-color-text-primary);
-  font-family: var(--kds-font-family-product), sans-serif;
-  font-size: var(--kds-font-size-heading-lg);
-  font-weight: var(--kds-font-weight-product-heading-moderate);
-  line-height: var(--kds-font-line-height-heading-lg);
-}
-
 .description {
   max-width: var(--kds-max-w-xs);
   margin: 0;
@@ -64,9 +53,7 @@
   background: var(--kds-color-surface-brand);
 }
 
-.brand .eyebrow,
-.brand .title,
-.inverse .title {
+.brand .eyebrow {
   color: var(--kds-color-text-inverse);
 }
 
@@ -168,7 +155,7 @@
 
 .approachMark {
   display: block;
-  width: 1em;
+  width: 2.75rem;
   aspect-ratio: 1;
   background: currentColor;
 }
@@ -212,10 +199,6 @@
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .title {
-    font-size: var(--kds-font-size-heading-xl);
-    line-height: var(--kds-font-line-height-heading-xl);
-  }
 }
 
 @media (min-width: 1280px) {

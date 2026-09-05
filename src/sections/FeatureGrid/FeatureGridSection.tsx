@@ -4,7 +4,6 @@ import styles from './FeatureGridSection.module.css'
 
 type Card = {
   eyebrow: string
-  title: string
   description?: string
   link?: string
   tone: 'default' | 'brand' | 'inverse' | 'lavender'
@@ -16,7 +15,6 @@ type Card = {
 const cards: Card[] = [
   {
     eyebrow: 'BY THE NUMBERS',
-    title: 'Our scale',
     tone: 'default',
     graphic: 'globe',
     metrics: [
@@ -25,10 +23,9 @@ const cards: Card[] = [
       { value: '50+', label: 'Years of insight', tone: 'orange' },
     ],
   },
-  { eyebrow: 'OUR PROMISE', title: 'Designed to deliver real impact.', description: 'Our solutions are built to be practical, scalable and always focused on outcomes that matter.', tone: 'brand', graphic: 'promise' },
+  { eyebrow: 'OUR PROMISE', description: 'Designed to deliver real impact. Our solutions are built to be practical, scalable and always focused on outcomes that matter.', tone: 'brand', graphic: 'promise' },
   {
     eyebrow: 'OUR APPROACH',
-    title: 'How we work',
     tone: 'default',
     graphic: 'approach',
     approach: [
@@ -37,9 +34,9 @@ const cards: Card[] = [
       { title: 'Act', description: 'Activate decisions that drive growth.', tone: 'orange' },
     ],
   },
-  { eyebrow: 'GLOBAL PERSPECTIVE', title: 'One world. Different perspectives.', link: 'Explore our thinking', tone: 'inverse', graphic: 'perspective' },
-  { eyebrow: 'INSIGHT SPOTLIGHT', title: 'The future is shaped by the choices we make now.', link: 'Read the report', tone: 'default', graphic: 'spotlight' },
-  { eyebrow: 'CAREERS', title: 'Your perspective can change everything.', link: 'Explore opportunities', tone: 'lavender', graphic: 'careers' },
+  { eyebrow: 'GLOBAL PERSPECTIVE', description: 'One world. Different perspectives.', link: 'Explore our thinking', tone: 'inverse', graphic: 'perspective' },
+  { eyebrow: 'INSIGHT SPOTLIGHT', description: 'The future is shaped by the choices we make now.', link: 'Read the report', tone: 'default', graphic: 'spotlight' },
+  { eyebrow: 'CAREERS', description: 'Your perspective can change everything.', link: 'Explore opportunities', tone: 'lavender', graphic: 'careers' },
 ]
 
 const accentClasses = {
@@ -58,10 +55,9 @@ export default function FeatureGridSection() {
       <Container variant="wide">
         <div className={styles.grid}>
           {cards.map((card) => (
-            <article key={card.eyebrow} className={`${styles.card} ${styles[card.tone]}`}>
+            <article key={card.eyebrow} className={`${styles.card} ${styles[card.tone]}`} aria-label={card.eyebrow}>
               <div className={styles.cardContent}>
                 <p className={styles.eyebrow}>{card.eyebrow}</p>
-                <h2 className={styles.title}>{card.title}</h2>
                 {card.description && <p className={styles.description}>{card.description}</p>}
                 {card.metrics && (
                   <dl className={styles.metrics}>

@@ -8,9 +8,7 @@
 
 .image {
   width: 100%;
-  aspect-ratio: 16 / 7;
-  object-fit: cover;
-  object-position: center;
+  height: auto;
 }
 
 @media (min-width: 768px) {

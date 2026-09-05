@@ -123,10 +123,11 @@
 .artwork {
   position: relative;
   order: -1;
-  width: min(100%, var(--kds-max-w-3xl));
+  width: min(100%, 637px);
   margin-inline: auto;
   aspect-ratio: 637 / 780;
   overflow: hidden;
+  border-radius: 32px;
 }
 
 .video {
