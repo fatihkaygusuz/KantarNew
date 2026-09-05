@@ -65,7 +65,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: var(--kds-size-12);
   padding: var(--kds-size-3) var(--kds-size-6);
   border-radius: var(--kds-radius-soft-md);
   font-family: var(--kds-font-family-product), sans-serif;
@@ -86,8 +85,8 @@
 }
 
 .primaryAction svg {
-  width: var(--kds-size-5);
-  height: var(--kds-size-5);
+  width: 1em;
+  height: 1em;
 }
 
 .secondaryAction {
@@ -115,8 +114,8 @@
 }
 
 .trustMark {
-  flex: 0 0 var(--kds-size-4);
-  height: var(--kds-size-4);
+  flex: 0 0 1em;
+  aspect-ratio: 1;
   margin-top: var(--kds-size-1);
   background: var(--kds-color-accent-blue);
 }
@@ -128,7 +127,6 @@
   margin-inline: auto;
   aspect-ratio: 637 / 780;
   overflow: hidden;
-  border-radius: var(--kds-radius-soft-2xl);
 }
 
 .video {
@@ -154,12 +152,7 @@
 @media (min-width: 1280px) {
   .layout {
     grid-template-columns: minmax(var(--kds-max-w-xl), 1fr) minmax(var(--kds-max-w-xl), 1.1fr);
-    min-height: var(--kds-size-192);
     padding-block: var(--kds-size-16);
-  }
-
-  .content {
-    order: -1;
   }
 
   .title {

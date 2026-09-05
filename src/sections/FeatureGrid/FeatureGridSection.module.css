@@ -5,7 +5,7 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   border-top: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle);
   border-left: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle);
 }
@@ -13,7 +13,6 @@
 .card {
   position: relative;
   display: flex;
-  min-height: var(--kds-size-72);
   overflow: hidden;
   padding: var(--kds-size-6);
   border-right: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle);
@@ -99,8 +98,79 @@
 .graphic {
   align-self: flex-end;
   flex: 0 0 24%;
-  min-height: 58%;
+  aspect-ratio: 3 / 5;
   margin-left: var(--kds-size-3);
+}
+
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--kds-size-2);
+  width: 100%;
+  margin: 0;
+}
+
+.metric {
+  padding-bottom: var(--kds-size-2);
+  border-bottom: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle);
+}
+
+.metricValue,
+.metricLabel {
+  margin: 0;
+}
+
+.metricValue {
+  font-family: var(--kds-font-family-brand), sans-serif;
+  font-size: var(--kds-font-size-heading-xl);
+  font-weight: var(--kds-font-weight-brand-display);
+  line-height: var(--kds-font-line-height-heading-xl);
+}
+
+.metricLabel,
+.approachItem small {
+  display: block;
+  color: var(--kds-color-text-secondary);
+  font-family: var(--kds-font-family-product), sans-serif;
+  font-size: var(--kds-font-size-body-xs);
+  line-height: var(--kds-font-line-height-body-xs);
+}
+
+.blueAccent { color: var(--kds-color-text-brand); }
+.lavenderAccent { color: var(--kds-lavender-700); }
+.orangeAccent { color: var(--kds-color-accent-orange); }
+
+.approachList {
+  display: grid;
+  gap: var(--kds-size-2);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.approachItem {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: var(--kds-size-3);
+  align-items: start;
+  padding-bottom: var(--kds-size-2);
+  border-bottom: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle);
+}
+
+.approachItem strong {
+  display: block;
+  color: var(--kds-color-text-primary);
+  font-family: var(--kds-font-family-product), sans-serif;
+  font-size: var(--kds-font-size-body-md);
+  line-height: var(--kds-font-line-height-body-md);
+}
+
+.approachMark {
+  display: block;
+  width: 1em;
+  aspect-ratio: 1;
+  background: currentColor;
 }
 
 .globe {
@@ -135,8 +205,11 @@
   }
 
   .card {
-    min-height: var(--kds-size-96);
     padding: var(--kds-size-8);
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .title {

@@ -1,4 +1,4 @@
-import photoStrip from '../../legacy/imports/image-1.png'
+import photoStrip from '../../assets/images/gallery-strip.png'
 import styles from './GalleryStripSection.module.css'
 
 export default function GalleryStripSection() {
