@@ -2,6 +2,7 @@ import { SiteHeader } from '../components/SiteHeader/SiteHeader'
 import ColourFieldSection from '../sections/ColourField/ColourFieldSection'
 import FeatureGridSection from '../sections/FeatureGrid/FeatureGridSection'
 import GalleryStripSection from '../sections/GalleryStrip/GalleryStripSection'
+import GlobalReachSection from '../sections/GlobalReach/GlobalReachSection'
 import HomeCarouselSection from '../sections/HomeCarousel/HomeCarouselSection'
 import IntelligenceSection from '../sections/Intelligence/IntelligenceSection'
 import KantarScaleSection from '../sections/KantarScale/KantarScaleSection'
@@ -18,6 +19,7 @@ export default function HomePage() {
         <IntelligenceSection />
         <GalleryStripSection />
         <HomeCarouselSection />
+        <GlobalReachSection />
         <ColourFieldSection />
         <SignalIntelligenceSection />
         <KantarScaleSection />

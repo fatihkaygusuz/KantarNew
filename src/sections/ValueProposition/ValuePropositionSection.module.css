@@ -117,20 +117,38 @@
 
 .artwork {
   position: relative;
-  width: 100%;
+  width: min(100%, 39.8125rem);
+  margin-inline: auto;
+  aspect-ratio: 637 / 780;
+  overflow: hidden;
 }
 
-.wave {
-  width: 100vw;
-  max-width: none;
-  height: auto;
-  margin-left: 50%;
-  transform: translateX(-50%);
+.video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {
+  .section {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: stretch;
+  }
+
+  .artwork {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    min-height: clamp(38rem, 54vw, 51.625rem);
+    aspect-ratio: auto;
+  }
+
   .contentContainer {
-    padding-block: var(--kds-size-12) var(--kds-size-20);
+    display: flex;
+    align-items: center;
+    padding-block: var(--kds-size-12);
   }
 
   .title {
@@ -140,16 +158,8 @@
 }
 
 @media (min-width: 1280px) {
-  .artwork {
-    position: absolute;
-    inset: 0 0 auto;
-    z-index: 0;
-  }
-
   .contentContainer {
-    min-height: clamp(46rem, 58vw, 66rem);
-    padding-top: clamp(30rem, 42vw, 43rem);
-    padding-bottom: var(--kds-size-20);
+    padding-block: var(--kds-size-16);
   }
 
   .content {

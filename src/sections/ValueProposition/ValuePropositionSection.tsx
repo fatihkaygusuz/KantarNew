@@ -1,6 +1,7 @@
 import { Container } from '../../components/Container/Container'
 import styles from './ValuePropositionSection.module.css'
 import waveArtwork from '../../assets/images/value-proposition-wave.png'
+import dualOrbitVideo from '../../assets/media/dual-orbit.mp4'
 
 function ArrowIcon() {
   return (
@@ -14,7 +15,9 @@ export default function ValuePropositionSection() {
   return (
     <section className={styles.section} aria-labelledby="value-proposition-heading">
       <div className={styles.artwork} aria-hidden="true">
-        <img className={styles.wave} src={waveArtwork} alt="" />
+        <video className={styles.video} autoPlay loop muted playsInline poster={waveArtwork}>
+          <source src={dualOrbitVideo} type="video/mp4" />
+        </video>
       </div>
 
       <Container variant="wide" className={styles.contentContainer}>
