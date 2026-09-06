@@ -1,0 +1,194 @@
+.section {
+  background: var(--kds-color-surface-subtle);
+}
+
+.container {
+  padding-block: var(--kds-size-16);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--kds-size-12);
+}
+
+.primaryColumn,
+.secondaryColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--kds-size-8);
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 var(--kds-size-6);
+  color: var(--kds-color-text-primary);
+  font-family: var(--kds-font-family-product), sans-serif;
+  font-size: var(--kds-font-size-label-md);
+  font-weight: var(--kds-font-weight-product-heading-strong);
+  line-height: var(--kds-font-line-height-label-md);
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  color: var(--kds-color-text-primary);
+  font-family: var(--kds-font-family-brand), sans-serif;
+  font-size: var(--kds-font-size-display-lg);
+  font-weight: var(--kds-font-weight-product-body);
+  line-height: var(--kds-font-line-height-display-lg);
+  letter-spacing: var(--kds-font-tracking-brand-display);
+}
+
+.title strong {
+  font-weight: var(--kds-font-weight-brand-display);
+}
+
+.description,
+.supportingCopy {
+  max-width: var(--kds-max-w-xl);
+  margin: 0;
+  color: var(--kds-color-text-secondary);
+  font-family: var(--kds-font-family-product), sans-serif;
+  font-size: var(--kds-font-size-body-md);
+  font-weight: var(--kds-font-weight-product-body);
+  line-height: var(--kds-font-line-height-body-md);
+}
+
+.signalCollage,
+.decisionCollage {
+  position: relative;
+  width: min(100%, 28.75rem);
+  aspect-ratio: 23 / 13;
+}
+
+.signalCollage span,
+.decisionCollage span {
+  position: absolute;
+  display: block;
+}
+
+.signalPanel {
+  top: 0;
+  left: 0;
+  width: 47.8%;
+  height: 80.8%;
+  background: var(--kds-color-border-neutral-default);
+}
+
+.signalGradient {
+  top: 23.1%;
+  left: 38.7%;
+  width: 10.4%;
+  height: 50%;
+  background: linear-gradient(180deg, var(--kds-orange-400), var(--kds-lavender-600));
+}
+
+.signalBlue {
+  top: 23.1%;
+  left: 49.6%;
+  width: 8.3%;
+  height: 24.6%;
+  background: var(--kds-color-accent-blue);
+}
+
+.signalOrange {
+  top: 8.5%;
+  left: 30.4%;
+  width: 8.3%;
+  height: 24.6%;
+  background: var(--kds-orange-400);
+}
+
+.signalLavender {
+  top: 55.4%;
+  left: 4.8%;
+  width: 8.5%;
+  height: 35.4%;
+  background: var(--kds-lavender-500);
+}
+
+.secondaryColumn {
+  padding-top: var(--kds-size-8);
+  border-top: var(--kds-size-px) solid var(--kds-color-border-neutral-default);
+}
+
+.decisionCollage {
+  align-self: end;
+  width: min(100%, 22.5rem);
+  aspect-ratio: 6 / 5;
+}
+
+.decisionPanel {
+  top: 17.3%;
+  right: 0;
+  width: 88.9%;
+  height: 80%;
+  background: var(--kds-color-border-neutral-default);
+}
+
+.decisionBlue {
+  top: 0;
+  left: 19.4%;
+  width: 13.6%;
+  height: 33.3%;
+  background: var(--kds-color-accent-blue);
+}
+
+.decisionLavender {
+  top: 15%;
+  left: 28.3%;
+  width: 8.9%;
+  height: 26.7%;
+  background: var(--kds-lavender-500);
+}
+
+.decisionGradient {
+  top: 55.3%;
+  left: 22.2%;
+  width: 11.9%;
+  height: 26.7%;
+  background: linear-gradient(180deg, var(--kds-blue-400), var(--kds-lavender-600), var(--kds-orange-400));
+}
+
+.decisionOrange {
+  top: 41.7%;
+  left: 32.8%;
+  width: 8.6%;
+  height: 13.7%;
+  background: var(--kds-orange-400);
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-block: var(--kds-size-24);
+  }
+
+  .layout {
+    grid-template-columns: minmax(0, 1.25fr) minmax(var(--kds-max-w-xs), 0.75fr);
+    gap: var(--kds-layout-grid-gutter);
+  }
+
+  .secondaryColumn {
+    justify-content: space-between;
+    padding-top: 0;
+    padding-left: var(--kds-size-8);
+    border-top: 0;
+    border-left: var(--kds-size-px) solid var(--kds-color-border-neutral-default);
+  }
+}
+
+@media (min-width: 1280px) {
+  .title {
+    font-size: var(--kds-font-size-display-2xl);
+    line-height: var(--kds-font-line-height-display-2xl);
+  }
+
+  .description,
+  .supportingCopy {
+    font-size: var(--kds-font-size-body-lg);
+    line-height: var(--kds-font-line-height-body-lg);
+  }
+}

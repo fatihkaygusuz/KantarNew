@@ -1,0 +1,169 @@
+.section {
+  background: var(--kds-color-surface-subtle);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: var(--kds-size-10);
+  padding-block: var(--kds-size-16);
+}
+
+.header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--kds-size-6);
+  align-items: end;
+}
+
+.headingGroup {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kds-size-4);
+}
+
+.eyebrow,
+.introduction,
+.metricDetails strong,
+.metricDetails span,
+.cta {
+  font-family: var(--kds-font-family-product), sans-serif;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--kds-color-text-secondary);
+  font-size: var(--kds-font-size-label-md);
+  font-weight: var(--kds-font-weight-product-heading-strong);
+  line-height: var(--kds-font-line-height-label-md);
+}
+
+.title {
+  margin: 0;
+  color: var(--kds-color-text-primary);
+  font-family: var(--kds-font-family-brand), sans-serif;
+  font-size: var(--kds-font-size-display-md);
+  font-weight: var(--kds-font-weight-brand-display);
+  line-height: var(--kds-font-line-height-display-md);
+  letter-spacing: var(--kds-font-tracking-brand-display);
+}
+
+.introduction {
+  max-width: var(--kds-layout-measure-narrow);
+  margin: 0;
+  color: var(--kds-color-text-primary);
+  font-size: var(--kds-font-size-body-lg);
+  font-weight: var(--kds-font-weight-product-body);
+  line-height: var(--kds-font-line-height-body-lg);
+}
+
+.spectrum {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  height: 0.375rem;
+}
+
+.blueSegment { background: var(--kds-color-accent-blue); }
+.lavenderSegment { background: var(--kds-color-accent-lavender); }
+.pinkSegment { background: var(--kds-pink-500); }
+.orangeSegment { background: var(--kds-color-accent-orange); }
+
+.metrics {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: var(--kds-size-8);
+  margin: 0;
+}
+
+.metric {
+  display: grid;
+  grid-template-columns: minmax(6rem, auto) minmax(0, 1fr);
+  gap: var(--kds-size-5);
+  padding-bottom: var(--kds-size-5);
+  border-bottom: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle);
+}
+
+.value {
+  margin: 0;
+  font-family: var(--kds-font-family-brand), sans-serif;
+  font-size: var(--kds-font-size-display-lg);
+  font-weight: var(--kds-font-weight-brand-display);
+  line-height: var(--kds-font-line-height-display-lg);
+  letter-spacing: var(--kds-font-tracking-brand-display);
+}
+
+.lavender { color: var(--kds-lavender-700); }
+.blue { color: var(--kds-color-text-brand); }
+.pink { color: var(--kds-pink-700); }
+
+.metricDetails {
+  display: flex;
+  flex-direction: column;
+  gap: var(--kds-size-2);
+  margin: 0;
+}
+
+.metricDetails strong {
+  color: var(--kds-color-text-primary);
+  font-size: var(--kds-font-size-body-md);
+  line-height: var(--kds-font-line-height-body-md);
+}
+
+.metricDetails span {
+  color: var(--kds-color-text-tertiary);
+  font-size: var(--kds-font-size-body-sm);
+  line-height: var(--kds-font-line-height-body-sm);
+}
+
+.cta {
+  align-self: flex-end;
+  display: inline-flex;
+  gap: var(--kds-size-2);
+  padding-bottom: var(--kds-size-1);
+  border-bottom: var(--kds-size-px) solid currentColor;
+  color: var(--kds-color-text-primary);
+  font-size: var(--kds-font-size-body-sm);
+  font-weight: var(--kds-font-weight-product-heading-strong);
+  line-height: var(--kds-font-line-height-body-sm);
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-block: var(--kds-size-24);
+  }
+
+  .header {
+    grid-template-columns: minmax(0, 1fr) minmax(var(--kds-max-w-md), 1fr);
+  }
+
+  .metrics {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: var(--kds-size-12);
+  }
+}
+
+@media (min-width: 1280px) {
+  .title {
+    font-size: var(--kds-font-size-display-lg);
+    line-height: var(--kds-font-line-height-display-lg);
+  }
+
+  .metrics {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .metric {
+    display: block;
+    min-height: 8.75rem;
+    padding-right: var(--kds-size-6);
+    border-right: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle);
+    border-bottom: 0;
+  }
+
+  .metric:last-child {
+    padding-right: 0;
+    border-right: 0;
+  }
+}
