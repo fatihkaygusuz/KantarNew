@@ -1,5 +1,5 @@
 .section {
-  background: var(--kds-color-surface-subtle);
+  background: var(--kds-color-surface-canvas);
 }
 
 .container {
@@ -87,9 +87,9 @@
 .value {
   margin: 0;
   font-family: var(--kds-font-family-brand), sans-serif;
-  font-size: var(--kds-font-size-display-lg);
+  font-size: var(--kds-font-size-display-xl);
   font-weight: var(--kds-font-weight-brand-display);
-  line-height: var(--kds-font-line-height-display-lg);
+  line-height: var(--kds-font-line-height-display-xl);
   letter-spacing: var(--kds-font-tracking-brand-display);
 }
 

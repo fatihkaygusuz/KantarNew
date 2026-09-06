@@ -1,0 +1,23 @@
+.section { background: var(--kds-color-surface-canvas); }
+.carousel { overflow: hidden; }
+.slide { display: grid; grid-template-columns: minmax(0, 1fr); background: var(--kds-color-surface-canvas); }
+.copy { display: flex; flex-direction: column; align-items: flex-start; gap: var(--kds-size-6); padding-block: var(--kds-size-16); min-width: 0; }
+.title { max-width: var(--kds-max-w-xl); margin: 0; color: var(--kds-color-text-primary); font-family: var(--kds-font-family-brand), sans-serif; font-size: var(--kds-font-size-display-md); font-weight: var(--kds-font-weight-brand-display); line-height: var(--kds-font-line-height-display-md); letter-spacing: var(--kds-font-tracking-brand-display); }
+.title span { color: var(--kds-lavender-700); }
+.description { max-width: var(--kds-max-w-md); margin: 0; color: var(--kds-color-text-secondary); font-family: var(--kds-font-family-product), sans-serif; font-size: var(--kds-font-size-body-md); line-height: var(--kds-font-line-height-body-md); }
+.controls { display: inline-flex; align-items: center; gap: var(--kds-size-4); margin-top: var(--kds-size-4); }
+.controls button { padding: 0; border: 0; color: var(--kds-color-text-primary); background: transparent; font-size: var(--kds-font-size-display-sm); cursor: pointer; }
+.controls span { width: var(--kds-size-px); height: 1.5em; background: var(--kds-color-border-neutral-default); }
+.artwork { position: relative; min-height: 20rem; overflow: hidden; background: var(--kds-color-surface-inverse); }
+.artwork span { position: absolute; display: block; }
+.artwork span:nth-child(1) { top: 0; left: 0; width: 52%; height: 100%; background: var(--kds-lavender-700); }
+.artwork span:nth-child(2) { top: 15%; left: 30%; width: 20%; height: 55%; background: var(--kds-color-accent-blue); }
+.artwork span:nth-child(3) { right: 8%; bottom: 0; width: 35%; height: 70%; background: var(--kds-color-accent-orange); }
+.artwork span:nth-child(4) { top: 12%; right: 15%; width: 23%; aspect-ratio: 1; border: var(--kds-size-px) solid var(--kds-color-text-inverse); }
+.blue span:nth-child(1) { background: var(--kds-color-accent-blue); }.blue span:nth-child(2) { background: var(--kds-lavender-500); }.green span:nth-child(1) { background: var(--kds-color-text-success); }.green span:nth-child(3) { background: var(--kds-color-accent-blue); }
+.cardContainer { padding-bottom: var(--kds-size-12); }
+.cards { display: grid; grid-template-columns: minmax(0, 1fr); border-top: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle); border-left: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle); }
+.card { display: flex; flex-direction: column; align-items: flex-start; justify-content: space-between; gap: var(--kds-size-6); min-height: 10rem; padding: var(--kds-size-6); border: 0; border-right: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle); border-bottom: var(--kds-size-px) solid var(--kds-color-border-neutral-subtle); color: var(--kds-color-text-primary); background: var(--kds-color-surface-default); text-align: left; cursor: pointer; }
+.card:hover,.active { background: var(--kds-color-surface-subtle); }.category { font-family: var(--kds-font-family-product), sans-serif; font-size: var(--kds-font-size-label-lg); font-weight: var(--kds-font-weight-product-heading-strong); line-height: var(--kds-font-line-height-label-lg); }.lavender { color: var(--kds-lavender-700); }.blue { color: var(--kds-color-text-brand); }.green { color: var(--kds-color-text-success); }.cardTitle { max-width: var(--kds-max-w-xs); font-family: var(--kds-font-family-product), sans-serif; font-size: var(--kds-font-size-heading-md); font-weight: var(--kds-font-weight-product-heading-strong); line-height: var(--kds-font-line-height-heading-md); }
+@media (min-width: 768px) { .slide { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }.copy { padding: var(--kds-size-20); }.artwork { min-height: 34rem; }.cards { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (min-width: 1280px) { .title { font-size: var(--kds-font-size-display-xl); line-height: var(--kds-font-line-height-display-xl); }.cards { grid-template-columns: repeat(4, minmax(0, 1fr)); }.card { min-height: 12.5rem; } }

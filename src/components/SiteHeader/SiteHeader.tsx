@@ -1,24 +1,21 @@
 import { useEffect, useState } from 'react'
+import logo from '../../assets/images/kantar-logo.svg'
 import { Container } from '../Container/Container'
 import styles from './SiteHeader.module.css'
 
-const wordmarkPath = 'M29.2415 0L20.4692 23.9999H25.0838L27.151 18.3328H35.7457L37.8213 23.9999H42.4338L33.6449 0H29.2415ZM31.4521 6.54309L34.2418 14.2272H28.6508L31.4521 6.54309ZM95.7462 0.00121293L104.534 23.9997H99.9218L97.8466 18.3326H89.2519L87.1843 23.9997H82.5701L91.3419 0.00121293H95.7462ZM85.0428 0.00121293V4.10721H78.7216V23.9997H74.1087V4.10721H67.7879V0.00121293H85.0428ZM93.5531 6.54296L90.7517 14.2271H96.3427L93.5531 6.54296ZM60.4188 0.00121293V15.2626L48.146 0.00121293H44.623V23.9997H49.2359V8.35157L61.8218 23.9997H65.0317V0.00121293H60.4188ZM111.341 4.11278H115.517C117.091 4.11278 117.878 4.49014 118.426 5.07279C118.939 5.62131 119.213 6.34143 119.213 7.13028C119.213 7.91869 118.939 8.60422 118.426 9.15273C117.878 9.73584 117.091 10.1127 115.517 10.1127H111.341V4.11278ZM127.135 23.9999L119.65 13.6172C120.587 13.2592 121.334 12.7524 121.951 12.1015C123.15 10.8675 123.834 9.01572 123.834 7.13028C123.834 5.2444 123.15 3.39266 121.951 2.15861C120.617 0.752961 118.802 0.000943391 115.722 0.000943391H106.719V23.9999H111.34L111.341 14.2273H115.109L122.103 23.9999H127.135ZM19.3619 0.00103324L14.3454 0.00148247L5.75964 12.0005L14.3471 24H19.3619L10.7784 12.0005L19.3619 0.00103324ZM0 23.9999H4.23432V0.00224617H0V23.9999Z'
-
 const navigation = [
+  { label: 'What we do', expandable: true },
   { label: 'Solutions', expandable: true },
+  { label: 'Industries', expandable: true },
   { label: 'Perspectives', expandable: true },
-  { label: 'BrandZ', expandable: false },
-  { label: 'Resources', expandable: true },
-  { label: 'Marketplace', expandable: false },
+  { label: 'About Kantar', expandable: true },
+  { label: 'Careers', expandable: false },
 ]
 
 function Logo() {
   return (
     <a className={styles.logo} href="#top" aria-label="Kantar home">
-      <svg aria-hidden="true" viewBox="0 0 128 24">
-        <path d={wordmarkPath} fill="currentColor" />
-        <path d="M3.97302 24H5.29735V0H3.97302V24Z" fill="var(--kds-yellow-600)" />
-      </svg>
+      <img src={logo} alt="Kantar" />
     </a>
   )
 }
@@ -46,8 +43,9 @@ export function SiteHeader() {
           ))}
         </nav>
         <div className={styles.actions}>
-          <a className={styles.login} href="#login">Log in</a>
-          <a className={styles.signup} href="#signup">Sign up</a>
+          <a className={styles.signIn} href="#sign-in">Sign in</a>
+          <span className={styles.divider} aria-hidden="true" />
+          <a className={styles.contact} href="#contact">Contact us</a>
         </div>
       </Container>
     </header>
