@@ -1,8 +1,6 @@
-@import 'tailwindcss';
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 @import './foundations/tokens.generated.css';
 @import './foundations/fonts.css';
 @import './foundations/typography.css';
-@import './legacy/legacy.css';
 @import './foundations/global.css';

@@ -5,11 +5,7 @@ import { fileURLToPath } from 'node:url'
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const root = path.resolve(__dirname, '..')
 
-const roots = [
-  path.join(root, 'src', 'components'),
-  path.join(root, 'src', 'sections'),
-  path.join(root, 'src', 'foundations'),
-]
+const roots = [path.join(root, 'src')]
 
 const ignored = new Set([
   path.join(root, 'src', 'foundations', 'tokens.generated.css'),
@@ -48,6 +44,11 @@ for (const file of roots.flatMap(walk)) {
       regex: /--site-[a-z0-9-]+/gi,
       hint: 'Use the generated KDS token directly. Do not duplicate it behind --site-*.',
     },
+    {
+      label: 'legacy arbitrary utility',
+      regex: /\b(?:w|h|min-w|min-h|max-w|max-h|left|right|top|bottom|inset|px|py|pt|pb|pl|pr|m|mx|my|mt|mb|ml|mr|text|leading|tracking|gap|size|flex|basis|rounded|z)-\[[^\]]+\]|font-\['[^']+'[^\]]*\]/g,
+      hint: 'Use CSS Modules and generated KDS tokens; do not reintroduce Tailwind/Figma arbitrary utility strings.',
+    },
   ]
 
   for (const check of checks) {
@@ -66,6 +67,7 @@ if (violations.length) {
 }
 
 console.log('Token binding check passed')
-console.log('- no raw colour values in clean code')
-console.log('- no d1–d5 scaling classes in clean code')
-console.log('- no duplicate --site-* token layer in clean code')
+console.log('- no raw colour values in active source')
+console.log('- no d1–d5 scaling classes in active source')
+console.log('- no duplicate --site-* token layer in active source')
+console.log('- no legacy arbitrary utility strings in active source')

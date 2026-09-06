@@ -13,20 +13,3 @@
   font-weight: 700;
   font-display: swap;
 }
-
-/* Compatibility aliases for generated Figma code while it lives in /legacy. */
-@font-face {
-  font-family: 'Kantar_Brown:Regular';
-  src: url('/fonts/Kantar_Brown-Regular.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Kantar_Brown:Bold';
-  src: url('/fonts/Kantar_Brown-Bold.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-}
